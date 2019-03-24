@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Semua</string>
+    <!--Indonesia-->
+    <string name="IDbtnpilih">Pilih</string>
+    <string name="IDpemesan">Nama Pemesan</string>
+    <string name="IDinputNama">Masukan Nama</string>
+    <string name="IDpesan">Pesan</string>
+    <string name="IDmenu">Menu Kopi</string>
+    <string name="IDsajian">Sajian</string>
+    <string name="IDhangat">Hangat</string>
+    <string name="IDdingin">Dingin</string>
+
+    <string name="IDrincianPesanan">Rincian Pesanan</string>
+    <string name="IDket">Total Harga Yang Harus Anda Bayar : </string>
+    <string name="IDmasukanUang">Masukan Uang : </string>
+    <string name="IDbayar">Bayar</string>
+    <string name="IDkembalian">Uang Kembalian</string>
+    <string name="IDkurang">Uang Anda Kurang !?</string>
+    <!--English-->
+    <string name="ENbtnpilih">Select</string>
+    <string name="ENpemesan">Customer Name</string>
+    <string name="ENinputNama">Enter Your Name</string>
+    <string name="ENpesan">Order</string>
+    <string name="ENmenu">Coffee Menu</string>
+    <string name="ENsajian">Dish</string>
+    <string name="ENhangat">Warm</string>
+    <string name="ENdingin">Cold</string>
+
+    <string name="ENrincianPesanan">Order Details</string>
+    <string name="ENket">The Total Price You Must Pay :</string>
+    <string name="ENmasukanUang">Enter Money : </string>
+    <string name="ENbayar">Pay</string>
+    <string name="ENkembalian">Money Back</string>
+    <string name="ENkurang">Your Money Less !?</string>
+</resources>
