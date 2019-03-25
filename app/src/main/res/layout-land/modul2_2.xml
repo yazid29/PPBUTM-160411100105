@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modul2Activity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10sp"
+    tools:context=".Modul22Activity">
+    <TextView
+        android:id="@+id/detailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/IDrincianPesanan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/namatxt"
+        android:layout_below="@+id/detailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/ket"
+        android:layout_below="@+id/namatxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="@string/IDket"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/hargatotal"
+        android:layout_below="@+id/ket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="0"
+        android:inputType="numberDecimal"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/masukanUangtxt"
+        android:layout_below="@+id/hargatotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="@string/IDmasukanUang"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/jumlahUangmu"
+        android:layout_below="@+id/masukanUangtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="0"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btnbayar"
+        android:onClick="bayar"
+        android:layout_below="@+id/jumlahUangmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:text="@string/IDbayar"/>
+    <TextView
+        android:id="@+id/kembaliantxt"
+        android:layout_below="@+id/btnbayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7sp"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/kembalian"
+        android:layout_below="@+id/kembaliantxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp" />
+</RelativeLayout>
+</ScrollView>
