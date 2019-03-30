@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void Modul4(View view){
+        Intent i = new Intent(this,Modul4Activity.class);
+        startActivity(i);
+    }
+
     //Modul1
     //no1
     public void klikbutton(View view){

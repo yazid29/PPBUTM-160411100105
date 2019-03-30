@@ -8,32 +8,26 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Modul3Activity extends AppCompatActivity {
+public class Modul4Activity extends AppCompatActivity {
     EditText username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.modul3);
+        setContentView(R.layout.modul4);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-
-        Log.d("Modul3Activity","onCreate");
     }
-
     public void login(View view) {
         String Uname = "yazid";
         String Upass = "105";
         String name = username.getText().toString();
         String pass = password.getText().toString();
 
-        Intent i = new Intent(this,Modul2Activity.class);
+        Intent i = new Intent(this,Modul4_menuActivity.class);
         if(name.length()>0){
             if (name.matches(Uname)&&(pass.matches(Upass))){
                 startActivity(i);
-                onStop();
-                Log.d("Modul3Activity","onStop");
                 finish();
-                Log.d("Modul3Activity","finish");
             }else {
                 Toast t = Toast.makeText(getApplicationContext(),"Username atau Password Salah",Toast.LENGTH_SHORT);
                 t.show();

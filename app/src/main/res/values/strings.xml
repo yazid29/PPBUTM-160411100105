@@ -32,4 +32,8 @@
     <string name="ENbayar">Pay</string>
     <string name="ENkembalian">Money Back</string>
     <string name="ENkurang">Your Money Less !?</string>
+
+    <!--Menu-->
+    <string name="logout">Logout</string>
+    <string name="about">About</string>
 </resources>

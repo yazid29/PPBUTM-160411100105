@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.semua">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Modul3Activity"></activity>
+        <activity android:name=".Modul4_pembayaranActivity"/>
+        <activity android:name=".Modul4_menudetailActivity" />
+        <activity android:name=".Modul4_aboutActivity"
+            android:parentActivityName=".Modul4_menuActivity"/>
+        <activity android:name=".Modul4_menuActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Modul4Activity" />
+        <activity android:name=".Modul3Activity" />
         <activity android:name=".Modul22Activity" />
         <activity android:name=".Modul2Activity" />
         <activity android:name=".MainActivity">
@@ -22,5 +29,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
