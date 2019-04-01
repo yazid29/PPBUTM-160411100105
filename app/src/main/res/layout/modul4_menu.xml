@@ -72,14 +72,18 @@
         android:hint="@string/IDinputNama"
         android:textSize="15sp"
         android:textAlignment="center"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvmenu"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/inputNama">
+        android:layout_below="@+id/inputNama"
+        android:layout_marginTop="20sp"
+        android:layout_above="@+id/order"
+        android:layout_marginBottom="50sp">
     </android.support.v7.widget.RecyclerView>
-    <!--Espresso,Cappucino,Latte,Luwak,Arabika,Robusta,American-->
+
     <Button
         android:id="@+id/order"
         android:onClick="order"
@@ -87,4 +91,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/IDpesan"/>
+
 </RelativeLayout>

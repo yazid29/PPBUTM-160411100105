@@ -4,7 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10sp"
+    android:padding="18sp"
     tools:context=".Modul4_menudetailActivity">
-
+    <TextView
+        android:id="@+id/detailmenutxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rincian Menu"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/namamenutxt"
+        android:layout_below="@id/detailmenutxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NamaMenu"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/hargatxt"
+        android:layout_below="@id/namamenutxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga : "
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/hargamenutxt"
+        android:layout_below="@id/hargatxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isi Harga"
+        android:layout_marginLeft="40sp"
+        android:textSize="25sp"
+        android:layout_marginTop="20sp"/>
+    <TextView
+        android:id="@+id/jumlahtxt"
+        android:layout_below="@id/hargamenutxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah : "
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"/>
+    <Button
+        android:id="@+id/minusMenu"
+        android:onClick="minus"
+        android:layout_below="@id/jumlahtxt"
+        android:layout_toLeftOf="@id/jumlahmenuMu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_marginTop="20sp"/>
+    <EditText
+        android:id="@+id/jumlahmenuMu"
+        android:layout_below="@+id/jumlahtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"/>
+    <Button
+        android:id="@+id/plusMenu"
+        android:onClick="plus"
+        android:layout_below="@id/jumlahtxt"
+        android:layout_toRightOf="@id/jumlahmenuMu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_marginTop="20sp"/>
+    <Button
+        android:id="@+id/btnAddtoCart"
+        android:onClick="toCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Ke Keranjang"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

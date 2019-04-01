@@ -76,15 +76,29 @@ public class Modul2Activity extends AppCompatActivity {
     }
 
     public void plus(View view){
-        Integer jmlh = Integer.valueOf(jumlah.getText().toString());
-        Integer total = jmlh+1;
-        jumlah.setText(total.toString());
+        String j = jumlah.getText().toString();
+        if (j.isEmpty()){
+            j="0";
+            Integer jmlh = Integer.valueOf(j);
+            Integer total = jmlh+1;
+            jumlah.setText(total.toString());
+        }else {
+            Integer jmlh = Integer.valueOf(j);
+            Integer total = jmlh+1;
+            jumlah.setText(total.toString());
+        }
     }
     public void minus(View view){
-        Integer jmlh = Integer.valueOf(jumlah.getText().toString());
-        if (jmlh>0){
-            Integer total = jmlh-1;
-            jumlah.setText(total.toString());
+        String j = jumlah.getText().toString();
+        if (j.isEmpty()) {
+            j = "0";
+        }
+        else {
+            Integer jmlh = Integer.valueOf(j);
+            if (jmlh > 0) {
+                Integer total = jmlh - 1;
+                jumlah.setText(total.toString());
+            }
         }
     }
 

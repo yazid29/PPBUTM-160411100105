@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,16 +18,26 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Modul4_menuActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
+    private RecyclerView rvmenu;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    TextView namapemesan;
+    public ArrayList<coffee> coffeeList;
+    TextView namapemesan,jumlahtxt;
     EditText inputNama;
     RadioGroup radiogroupbhs;
     RadioButton BhsID,BhsEN;
     Button pilihBhs,order;
     String bhs="ID";
+
+    void addData(){
+        coffeeList = new ArrayList<>();
+        coffeeList.add(new coffee(0,"Arabica","7000","0",0));
+        coffeeList.add(new coffee(1,"Robusta","8000","0",0));
+        coffeeList.add(new coffee(2,"Americana","9000","0",0));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +50,21 @@ public class Modul4_menuActivity extends AppCompatActivity {
         namapemesan = findViewById(R.id.namapemesan);
         inputNama = findViewById(R.id.inputNama);
         order = findViewById(R.id.order);
+        rvmenu = findViewById(R.id.rvmenu);
+        jumlahtxt = findViewById(R.id.jumlahtxt);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        addData();
+        rvmenu.setHasFixedSize(true);
+
+        mAdapter = new Modul4_RecycleViewAdapter(this,coffeeList);
+        rvmenu.setAdapter(mAdapter);
+
+        layoutManager = new LinearLayoutManager(this);
+        rvmenu.setLayoutManager(layoutManager);
     }
+
     public void pilihRD(View view){
         int selectedId = radiogroupbhs.getCheckedRadioButtonId();
         if (selectedId==BhsEN.getId()){
@@ -82,8 +105,41 @@ public class Modul4_menuActivity extends AppCompatActivity {
     }
 
     public void order(View view) {
+        String rdbhs= bhs;
+        String namamu = inputNama.getText().toString();
+        Integer arabica = coffeeList.get(0).getTotal();
+        Integer robusta = coffeeList.get(1).getTotal();
+        Integer americana = coffeeList.get(2).getTotal();
+
+        Integer hasil = arabica+robusta+americana;
         Intent i = new Intent(this,Modul4_pembayaranActivity.class);
-        startActivity(i);
+        if (!namamu.isEmpty()){
+            if (arabica!=0 && robusta!=0 && americana!=0){
+                i.putExtra("bhs",rdbhs);
+                i.putExtra("name",namamu);
+                i.putExtra("msgJumlah",hasil);
+                startActivity(i);
+            }else {
+                Toast.makeText(this,"Silahkan PilihMenu",Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(this,"Nama Kosong",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                Integer index = data.getIntExtra("index",0);
+                Integer jumlahmenu = data.getIntExtra("jumlahmenu",0);
+                Integer total = data.getIntExtra("totalHarga",0);
+
+                coffeeList.get(index).setJumlah(jumlahmenu.toString());
+                coffeeList.get(index).setTotal(total);
+                mAdapter.notifyDataSetChanged();
+            }
+        }
     }
 }
 
