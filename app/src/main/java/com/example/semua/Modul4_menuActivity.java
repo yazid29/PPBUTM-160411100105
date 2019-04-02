@@ -114,7 +114,7 @@ public class Modul4_menuActivity extends AppCompatActivity {
         Integer hasil = arabica+robusta+americana;
         Intent i = new Intent(this,Modul4_pembayaranActivity.class);
         if (!namamu.isEmpty()){
-            if (arabica!=0 && robusta!=0 && americana!=0){
+            if (arabica!=0 || robusta!=0 || americana!=0){
                 i.putExtra("bhs",rdbhs);
                 i.putExtra("name",namamu);
                 i.putExtra("msgJumlah",hasil);
