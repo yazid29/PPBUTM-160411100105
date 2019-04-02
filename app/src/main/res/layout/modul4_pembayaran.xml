@@ -57,7 +57,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7sp"
         android:text="0"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:inputType="numberDecimal"/>
     <Button
         android:id="@+id/btnbayar"
         android:onClick="bayar"
