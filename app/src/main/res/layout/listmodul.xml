@@ -52,6 +52,14 @@
         android:textSize="25sp"/>
 
     <Button
+        android:id="@+id/modul5"
+        android:onClick="Modul5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODUL 5"
+        android:textSize="25sp"/>
+
+    <Button
         android:id="@+id/btnhome"
         android:onClick="btnhome"
         android:layout_width="match_parent"

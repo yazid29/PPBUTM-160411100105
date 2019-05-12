@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,Modul4Activity.class);
         startActivity(i);
     }
+    public void Modul5(View view){
+        Intent i = new Intent(this,Modul5Activity.class);
+        startActivity(i);
+    }
 
     //Modul1
     //no1

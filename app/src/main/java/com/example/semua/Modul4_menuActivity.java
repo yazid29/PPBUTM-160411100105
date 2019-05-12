@@ -114,13 +114,17 @@ public class Modul4_menuActivity extends AppCompatActivity {
         Integer hasil = arabica+robusta+americana;
         Intent i = new Intent(this,Modul4_pembayaranActivity.class);
         if (!namamu.isEmpty()){
-            if (arabica!=0 || robusta!=0 || americana!=0){
-                i.putExtra("bhs",rdbhs);
-                i.putExtra("name",namamu);
-                i.putExtra("msgJumlah",hasil);
-                startActivity(i);
+            if(namamu.matches("^[a-zA-Z]*$")) {
+                if (arabica != 0 || robusta != 0 || americana != 0) {
+                    i.putExtra("bhs", rdbhs);
+                    i.putExtra("name", namamu);
+                    i.putExtra("msgJumlah", hasil);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(this, "Silahkan PilihMenu", Toast.LENGTH_SHORT).show();
+                }
             }else {
-                Toast.makeText(this,"Silahkan PilihMenu",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Hanya Menerima Huruf",Toast.LENGTH_SHORT).show();
             }
         }else{
             Toast.makeText(this,"Nama Kosong",Toast.LENGTH_SHORT).show();

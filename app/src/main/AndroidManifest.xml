@@ -11,12 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Modul4_pembayaranActivity"/>
-        <activity android:name=".Modul4_menudetailActivity" />
-        <activity android:name=".Modul4_aboutActivity"
-            android:parentActivityName=".Modul4_menuActivity"/>
-        <activity android:name=".Modul4_menuActivity"
+
+        <activity android:name=".Modul5_menudetailActivity" />
+        <activity android:name=".Modul5_pembayaranActivity" />
+        <activity android:name=".Modul5_menuActivity"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Modul5Activity" />
+        <activity android:name=".Modul5_aboutActivity"
+            android:parentActivityName=".Modul5_menuActivity">
+        </activity>
+        <activity android:name=".Modul4_pembayaranActivity" />
+        <activity android:name=".Modul4_menudetailActivity" />
+        <activity
+            android:name=".Modul4_aboutActivity"
+            android:parentActivityName=".Modul4_menuActivity" />
+        <activity
+            android:name=".Modul4_menuActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Modul4Activity" />
         <activity android:name=".Modul3Activity" />
         <activity android:name=".Modul22Activity" />
@@ -29,4 +40,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

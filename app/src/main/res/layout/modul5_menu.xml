@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modul5_menuActivity"
+    android:padding="7sp">
+
+    <LinearLayout
+        android:id="@+id/bahasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/radiogroupbhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/BhsID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/idn_x32"
+                android:layout_marginTop="8sp"/>
+            <RadioButton
+                android:id="@+id/BhsEN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/eng_x32"
+                android:layout_marginTop="8sp"/>
+            <Button
+                android:id="@+id/pilihBhs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/IDbtnpilih"
+                android:onClick="pilihRD"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/namaShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bahasa"
+        android:text="COFFEE SHOP"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/namapemesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namaShop"
+        android:text="@string/IDpemesan"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namapemesan"
+        android:hint="@string/IDinputNama"
+        android:textSize="15sp"
+        android:textAlignment="center"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputNama"
+
+        android:layout_marginTop="20sp"
+        android:layout_above="@+id/order"
+        android:layout_marginBottom="50sp">
+    </ListView>
+
+    <Button
+        android:id="@+id/order"
+        android:onClick="order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/IDpesan"/>
+
+</RelativeLayout>
