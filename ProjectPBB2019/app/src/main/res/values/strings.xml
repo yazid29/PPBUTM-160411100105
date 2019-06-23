@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Project PPB</string>
+    <string name="float_usrname">Username</string>
+    <string name="float_passw">Password</string>
+
+    <string name="reg_email">E-mail</string>
+    <string name="reg_passw">Password</string>
+    <string name="reg_cpassw">Confirm Password</string>
+
+    <string name="word_1">Username</string>
+    <string name="word_2">Password</string>
+
+
+</resources>

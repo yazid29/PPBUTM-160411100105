@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="220sp"
+        android:layout_height="275sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290sp"
+        android:background="@drawable/custom_style" />
+
+    <TextView
+        android:id="@+id/greet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Pengguna Baru!"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        />
+
+    <Button
+        android:id="@+id/butt_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/greet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="185sp"
+        android:text="Register"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/custom_button"
+        tools:ignore="UnknownId" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="45sp"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/RegUsrname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="@string/reg_email"
+            android:inputType="textCapWords"
+            android:backgroundTint="@color/colorPrimaryDark"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="100sp"
+        android:layout_centerHorizontal="true"
+        >
+        <EditText
+            android:id="@+id/RegPassw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="@string/reg_passw"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/colorPrimaryDark"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="155sp"
+        android:layout_centerHorizontal="true"
+        >
+        <EditText
+            android:id="@+id/RegCPassw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="@string/reg_cpassw"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/colorPrimaryDark"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="150sp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:srcCompat="@drawable/anstudio" />
+
+</RelativeLayout>
